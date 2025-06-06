@@ -1,0 +1,396 @@
+/* Reset e configurações base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+#root {
+  height: 100vh;
+  width: 100%;
+}
+
+/* Cores globais */
+:root {
+  --bg-primary: #2a2a2a;
+  --bg-secondary: #3a3a3a;
+  --bg-input: #2a2a2a;
+  --border-primary: #4a90e2;
+  --border-secondary: #555555;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-accent: #4a90e2;
+  --button-primary: #4a90e2;
+  --button-primary-hover: #357abd;
+  --button-disabled: #555555;
+  --error-color: #ff4444;
+  --error-hover: #cc3333;
+  --shadow: rgba(0, 0, 0, 0.5);
+}
+
+/* Tipografia */
+h1 {
+  font-size: 28px;
+  color: var(--text-accent);
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 22px;
+  color: var(--text-accent);
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 18px;
+  color: var(--text-accent);
+  margin: 0;
+}
+
+/* Layout containers */
+.app-container {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.gap-small {
+  gap: 8px;
+}
+
+.gap-medium {
+  gap: 15px;
+}
+
+.gap-large {
+  gap: 30px;
+}
+
+.gap-xl {
+  gap: 40px;
+}
+
+/* Botões */
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background-color: var(--button-primary);
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--button-primary-hover);
+}
+
+.btn-primary:disabled {
+  background-color: var(--button-disabled);
+  cursor: not-allowed;
+}
+
+.btn-error {
+  background-color: var(--error-color);
+  color: white;
+}
+
+.btn-error:hover:not(:disabled) {
+  background-color: var(--error-hover);
+}
+
+.btn-small {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+/* Inputs */
+.input {
+  background-color: var(--bg-input);
+  color: var(--text-primary);
+  border: 1px solid var(--border-secondary);
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--border-primary);
+}
+
+.input-matrix {
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Cards e seções */
+.card {
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  border: 2px solid var(--border-primary);
+  padding: 15px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  color: var(--text-accent);
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/* Steppers */
+.stepper-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.stepper-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.stepper-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stepper-value {
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Grid layouts */
+.matrix-grid {
+  display: grid;
+  gap: 4px;
+}
+
+.operation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.controls-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+/* Matrix específico */
+.matrix-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.matrix-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.result-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.result-cell {
+  width: 60px;
+  height: 40px;
+  background-color: var(--bg-input);
+  color: var(--text-accent);
+  border: 1px solid var(--border-secondary);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Modals e popups */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--shadow);
+  z-index: 999;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px var(--shadow);
+  z-index: 1000;
+  text-align: center;
+}
+
+.error-popup {
+  border: 2px solid var(--error-color);
+}
+
+/* Utilitários */
+.text-center {
+  text-align: center;
+}
+
+.text-accent {
+  color: var(--text-accent);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.mb-small {
+  margin-bottom: 10px;
+}
+
+.mb-medium {
+  margin-bottom: 20px;
+}
+
+.mb-large {
+  margin-bottom: 30px;
+}
+
+.mt-large {
+  margin-top: 30px;
+}
+
+.mt-xl {
+  margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+  
+  .controls-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .matrix-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .operation-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-matrix {
+    width: 40px;
+    height: 35px;
+    font-size: 12px;
+  }
+  
+  .result-cell {
+    width: 50px;
+    height: 35px;
+    font-size: 12px;
+  }
+}
+
+/* Scrollbar customizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-primary);
+}
