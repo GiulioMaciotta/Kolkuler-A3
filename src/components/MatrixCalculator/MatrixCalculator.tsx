@@ -2,7 +2,6 @@ import React, { useState, useCallback } from 'react';
 
 // Tipos TypeScript
 type Operation = 'add' | 'subtract' | 'multiply' | 'determinant' | 'transposeA' | 'transposeB';
-
 // Componente Principal
 const MatrixCalculator: React.FC = () => {
   const [rows, setRows] = useState<number>(2);
@@ -71,7 +70,6 @@ const MatrixCalculator: React.FC = () => {
     
     setter(newMatrix);
     setResult(null); // Limpar resultado quando valores mudam
-  };
 
   // Funções de cálculo
   const addMatrices = (a: number[][], b: number[][]): number[][] => {
@@ -141,6 +139,7 @@ const MatrixCalculator: React.FC = () => {
 
         case 'multiply':
           if (matrixA[0].length !== matrixB.length) {
+
             throw new Error('Número de colunas de A deve ser igual ao número de linhas de B para multiplicação');
           }
           result = multiplyMatrices(matrixA, matrixB);
