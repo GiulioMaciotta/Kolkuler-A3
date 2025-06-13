@@ -4,7 +4,7 @@
   "description": "Organizador pessoal com ferramentas matemáticas integradas",
   "author": "Giulio Maciotta <gmaciotta@gmail.com>",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.1",
   "main": "src-electron/main.js",
   "homepage": "./",
   "scripts": {
