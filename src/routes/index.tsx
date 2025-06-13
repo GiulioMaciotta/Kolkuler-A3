@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home/Home';
 import MatrixCalculator from '../components/MatrixCalculator/MatrixCalculator';
+import LinearSystemCalculator from '../components/LinearSystemCalculator/LinearSystemCalculator';
 
 const AppRoutes: React.FC = () => {
   return (
@@ -26,6 +27,7 @@ const AppRoutes: React.FC = () => {
         </div>
       } />
       <Route path="/matrix" element={<MatrixCalculator />} />
+      <Route path="/linear-system" element={<LinearSystemCalculator />} />
     </Routes>
   );
 };

@@ -9,7 +9,8 @@ const Menu: React.FC = () => {
     { path: '/tasks', label: 'Tarefas', icon: '📋' },
     { path: '/calendar', label: 'Calendário', icon: '📅' },
     { path: '/notes', label: 'Notas', icon: '📝' },
-    { path: '/matrix', label: 'Calculadora', icon: '🔢' }
+    { path: '/matrix', label: 'Calc. Matrizes', icon: '📊' },
+    { path: '/linear-system', label: 'Sistemas Lineares', icon: '🔢' }
   ];
 
   return (
